@@ -1,0 +1,3 @@
+[submodule "vim-pandemic"]
+	path = vim-pandemic
+	url = git@github.com:jwcxz/vim-pandemic

@@ -2,16 +2,16 @@ let mapleader='\'
 let maplocalleader='\\'
 
 " sneak.vim mappings
-let  g:sneak#nextprev_f = 0
-let  g:sneak#use_ic_scs = 1
-nmap F      <Plug>SneakBackward
-nmap <ESC>f <Plug>SneakForward
-nmap ,      <Plug>SneakNext
-nmap _      <Plug>SneakPrevious
-xmap ,      <Plug>VSneakNext
-xmap _      <Plug>VSneakPrevious
-silent! nunmap s
-silent! nunmap S
+"let  g:sneak#nextprev_f = 0
+"let  g:sneak#use_ic_scs = 1
+"nmap F      <Plug>SneakBackward
+"nmap <ESC>f <Plug>SneakForward
+"nmap ,      <Plug>SneakNext
+"nmap _      <Plug>SneakPrevious
+"xmap ,      <Plug>VSneakNext
+"xmap _      <Plug>VSneakPrevious
+"silent! nunmap s
+"silent! nunmap S
 
 " C-{hjkl} resize windows
 map <silent> <C-h> <C-w><
@@ -39,27 +39,27 @@ noremap <silent> <Esc>c :tabclose<CR>
 noremap <silent> tt :ta 
 
 " unite.vim
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
+"call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
-autocmd FileType unite call s:unite_custom_settings()
-function! s:unite_custom_settings()
-    nmap <buffer> <ESC> <Plug>(unite_all_exit)
-    nmap <buffer> ;c    <Plug>(unite_all_exit)
-    nmap <buffer> '     <Plug>(unite_quick_match_default_action)
+"autocmd FileType unite call s:unite_custom_settings()
+"function! s:unite_custom_settings()
+"    nmap <buffer> <ESC> <Plug>(unite_all_exit)
+"    nmap <buffer> ;c    <Plug>(unite_all_exit)
+"    nmap <buffer> '     <Plug>(unite_quick_match_default_action)
+"
+"    imap <buffer> <TAB> <Plug>(unite_select_next_line)
+"    imap <buffer> '     <Plug>(unite_quick_match_default_action)
+"    imap <buffer> <C-o> <ESC><Plug>(unite_all_exit)
+"    imap <buffer> <C-w> <Plug>(unite_delete_backward_path)
+"    imap <buffer> <C-l> <Plug>(unite_redraw)
+"endfunction
 
-    imap <buffer> <TAB> <Plug>(unite_select_next_line)
-    imap <buffer> '     <Plug>(unite_quick_match_default_action)
-    imap <buffer> <C-o> <ESC><Plug>(unite_all_exit)
-    imap <buffer> <C-w> <Plug>(unite_delete_backward_path)
-    imap <buffer> <C-l> <Plug>(unite_redraw)
-endfunction
-
-nnoremap <silent> ;; :<C-u>Unite -start-insert buffer<CR>
-nnoremap <silent> ;t :<C-u>Unite -start-insert tag<CR>
-nnoremap <silent> ;f :<C-u>Unite -start-insert file<CR>
-nnoremap <silent> ;R :<C-u>Unite -start-insert file_rec<CR>
-nnoremap <silent> ;r :<C-u>Unite -start-insert file_rec/async<CR>
-
+"nnoremap <silent> ;; :<C-u>Unite -start-insert buffer<CR>
+"nnoremap <silent> ;t :<C-u>Unite -start-insert tag<CR>
+"nnoremap <silent> ;f :<C-u>Unite -start-insert file<CR>
+"nnoremap <silent> ;R :<C-u>Unite -start-insert file_rec<CR>
+"nnoremap <silent> ;r :<C-u>Unite -start-insert file_rec/async<CR>
+"
 " tree view
 nnoremap <F10> :NERDTreeToggle<CR>
 nnoremap ;aF   :NERDTreeFind<CR>
