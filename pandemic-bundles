@@ -1,0 +1,3 @@
+[nerdtree]
+source = git@github.com:scrooloose/nerdtree
+type = git

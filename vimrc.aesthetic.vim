@@ -4,7 +4,7 @@ set encoding=utf-8
 set lazyredraw
 set cursorline
 set laststatus=2
-set foldlevelstart=99
+set foldlevelstart=10
 set mouse=a
 set foldcolumn=1
 
@@ -14,6 +14,10 @@ if has('multi_byte')
     set list
     set listchars=tab:»·,trail:·
     set fillchars=vert:┃
+
+if !has('vim_starting')
+    NeoBundleSource airline
+    AirlineRefresh
 endif
 
 if has('termtruecolor')
@@ -22,12 +26,12 @@ if has('termtruecolor')
     set guicolors
 endif
 
-if &term =~ "256" || has('nvim')
-
+if &term =~ "256" 
     " 256-color terminals get a modified version of lucius
     set t_Co=256
-    colorscheme distinguished
-
+"    colorscheme lucius
+"    LuciusDark
+    colorscheme darkblue
     " make things a little nicer
     hi Normal       ctermfg=255  ctermbg=none guifg=#FFFFFF guibg=#000000
     hi Todo         ctermfg=160  ctermbg=233  guifg=#D70000 guibg=#121212
@@ -37,10 +41,13 @@ if &term =~ "256" || has('nvim')
 
 else
 
-    colorscheme murphy
-    hi CursorLine   term=underline
-    hi CursorColumn term=underline
-    hi PmenuSel     cterm=none  ctermfg=yellow  ctermbg=black
+    set t_Co=256
+"    colorscheme industry
+   colorscheme darkblue
+    hi Normal       ctermfg=255 ctermbg=none
+    hi CursorLine   term=underline 
+    hi CursorColumn term=underline 
+    hi PmenuSel     cterm=none  ctermfg=yellow  ctermbg=none
     hi PmenuThumb   cterm=none  ctermfg=yellow  ctermbg=yellow
     hi PmenuSbar    cterm=none  ctermfg=cyan    ctermbg=cyan
 

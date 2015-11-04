@@ -40,6 +40,14 @@ endfunction
 
 nnoremap <silent> <Enter> :call FoldToggle()<CR>
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+"
+" tree view
+nnoremap <F10> :NERDTreeToggle<CR>
+nnoremap ;aF   :NERDTreeFind<CR>
+
+" taglist
+nnoremap <silent> <F9> :Tlist<CR>
+nnoremap <silent> ;aT  :TlistOpen
 
 " Xorg paste escape codes
 map  <ESC>[200~ :set paste<CR>a
