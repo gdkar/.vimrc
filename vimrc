@@ -6,25 +6,25 @@ let g:cfg_vimcfg_dir = expand('~/.vim')
 
 if has('vim_starting')
     set nocompatible
-"    if !exists('g:completer')
-"        let g:completer = ''
-"    endif
+    if !exists('g:completer')
+        let g:completer = ''
+    endif
 endif
 
-"if has('vim_starting')
-"    set nocompatible
-"    if !exists('g:completer')
-"        if has('python')
-"            let g:completer = 'youcompleteme'
-"        else 
-"          if has('lua')
-"            let g:completer = 'neocomplete'
-"          else
-"            let g:completer = 'neocomplcache'
-"          endif
-"        endif
-"    endif
-"endif
+if has('vim_starting')
+    set nocompatible
+    if !exists('g:completer')
+        if has('python')
+            let g:completer = 'youcompleteme'
+        else 
+          if has('lua')
+            let g:completer = 'neocomplete'
+          else
+            let g:completer = 'neocomplcache'
+          endif
+        endif
+    endif
+endif
 
 
 exec 'source ' . g:cfg_vimcfg_dir.'/vimrc.behavior.vim'

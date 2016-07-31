@@ -1,6 +1,6 @@
 set isk=a-z,A-Z,48-57,_
 set history=256
-"set ttyfast
+set ttyfast
 set hidden
 "if has('cryptv')
 "    set cryptmethod="blowfish"
@@ -13,10 +13,10 @@ filetype plugin on
 set wildmode=longest,list
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 
-"set modeline
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set modeline
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set shiftround
 set expandtab
 set nohlsearch
@@ -24,7 +24,7 @@ set incsearch
 set noswapfile
 
 set autoindent
-"set smartindent
+set smartindent
 set backspace=indent,eol,start
 
 "set ignorecase
@@ -33,15 +33,15 @@ set backspace=indent,eol,start
 "set grepprg=ack
 
 
-"if has('cscope')
-"    "set cscopetag cscopeverbose
-"
-"    if has('quickfix')
-"    set cscopequickfix=s-,c-,d-,i-,t-,e-
-"    endif
-"
-"    command! -nargs=0 Cscope cs add $VIMSRC/src/cscope.out $VIMSRC/src
-"endif
+if has('cscope')
+    "set cscopetag cscopeverbose
+
+    if has('quickfix')
+    set cscopequickfix=s-,c-,d-,i-,t-,e-
+    endif
+
+    command! -nargs=0 Cscope cs add $VIMSRC/src/cscope.out $VIMSRC/src
+endif
 
 
 " vim: fdm=marker
