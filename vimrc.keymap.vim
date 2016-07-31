@@ -15,6 +15,7 @@ noremap <silent> <C-n> :bn<CR>
 " ; is C-w, ;, is ,
 "noremap <silent> ,  ;
 "noremap <silent> ;, ,
+cnoremap w!! w !sudo tee > /dev/null %
 noremap <silent> ;  <C-w>
 noremap <silent> ;] <C-w><C-]>
 
